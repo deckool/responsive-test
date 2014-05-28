@@ -1,0 +1,72 @@
+@import 'reset.css';
+@import 'demo.css';
+@import 'grid.less';
+
+
+//////////
+// GRID //
+//////////
+
+// Specify the number of columns and set column and gutter widths
+@columns: 5;
+@column-width: 100;
+@gutter-width: 0;
+
+// Remove the definition below for a pixel-based layout
+@total-width: 100%;
+
+//set margin
+@margin_all: 0em;
+
+////////////
+// LAYOUT //
+////////////
+
+// header
+header#top {
+	margin-bottom: @margin_all;
+}
+
+//picture
+article#top h1 {
+	margin-top:-100px;
+}
+.transparent h2{
+	background-color:transparent !important;
+}
+//footer
+#bottom h1 {
+	background:#000;
+	clear:both;
+}
+
+#other {
+	.column(12);
+	margin-bottom: @margin_all;
+}
+
+// main column & sidebar
+#maincolumn {
+	.column(9);
+}
+
+#sidebar {
+	.column(1);
+	margin-bottom: @margin_all;
+}
+#navigator {
+	padding:10px 0;
+}
+@media screen and (max-width: 800px) {
+	#maincolumn,
+	#sidebar, .image {
+		.column(12);
+		margin-bottom: @margin_all;
+	}
+	.transparent {
+		display:none !important;
+	}
+	.item { width: 100%;}
+	.item.w2 { width: 100%;}
+	#zb {width:100%;}
+}

@@ -20,7 +20,7 @@ site =
     ifTop xxx <|>
     route [ ("foo", writeBS "bar")
           , ("echo/:echoparam", echoHandler)
-          , ("/lol/", serveDirectoryWith fancyDirectoryConfig "../semantic.gs")
+          , ("/lol/", serveDirectoryWith fancyDirectoryConfig "../semantic")
           --, ("/js", serveDirectory "../semantic.gs")
           ] <|>
     dir "static" (serveDirectory ".")
